@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/rootLayout">
 
     <TextView
         android:id="@+id/titleTextView"
@@ -18,8 +19,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/changeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Some Button Added"/>
+        android:text="change"/>
 
 </LinearLayout>
