@@ -14,10 +14,16 @@ class MainActivity : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.countTextView)
 
         if (savedInstanceState == null) textView.text = (0).toString()
+        button.isEnabled = (application as App).buttonEnabled
 
         button.setOnClickListener {
-            var cur = textView.text.toString().toInt()
-            textView.text = (cur + 2).toString()
+            val cur = textView.text.toString().toInt() + 2
+            textView.text = cur.toString()
+
+            if (cur == 4) {
+                (application as App).buttonEnabled = false
+                it.isEnabled = (application as App).buttonEnabled
+            }
         }
     }
 }
