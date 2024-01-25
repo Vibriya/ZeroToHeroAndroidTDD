@@ -27,6 +27,13 @@ class MainViewModel(
     }
 
     fun liveData() = liveDataWrapper.liveData()
+    fun save(bundleWrapper: BundleWrapper.Save) {
+        liveDataWrapper.save(bundleWrapper)
+    }
+
+    fun restore(bundleWrapper: BundleWrapper.Restore) {
+        liveDataWrapper.update(bundleWrapper.restore())
+    }
 
     companion object {
         val Factory: ViewModelProvider.Factory = viewModelFactory {

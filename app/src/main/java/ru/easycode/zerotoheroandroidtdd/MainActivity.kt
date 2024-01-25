@@ -28,4 +28,14 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.init(savedInstanceState == null)
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        viewModel.save(BundleWrapper.Base(outState))
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        viewModel.restore(BundleWrapper.Base(savedInstanceState))
+    }
 }
