@@ -15,6 +15,11 @@ interface LiveDataWrapper {
         }
 
         override fun liveData() = liveData
+        override fun save(bundleWrapper: BundleWrapper.Save) {
+            liveData.value?.let { bundleWrapper.save(it) }
+        }
 
     }
+
+    fun save(bundleWrapper: BundleWrapper.Save)
 }

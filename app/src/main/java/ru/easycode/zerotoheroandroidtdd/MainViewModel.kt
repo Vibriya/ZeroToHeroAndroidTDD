@@ -7,6 +7,8 @@ import androidx.lifecycle.viewmodel.viewModelFactory
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 
 class MainViewModel(
@@ -23,10 +25,24 @@ class MainViewModel(
         scope.launch {
             repository.load()
             liveDataWrapper.update(UiState.ShowData)
+            coroutineScope {
+                liveDataWrapper.update(UiState.ShowData)
+            }
+            val d = async {
+
+            }
+            d.cancel()
         }
     }
 
     fun liveData() = liveDataWrapper.liveData()
+    fun save(bundleWrapper: BundleWrapper.Save) {
+        liveDataWrapper.save(bundleWrapper)
+    }
+
+    fun restore(bundleWrapper: BundleWrapper.Restore) {
+        liveDataWrapper.update(bundleWrapper.restore())
+    }
 
     companion object {
         val Factory: ViewModelProvider.Factory = viewModelFactory {
