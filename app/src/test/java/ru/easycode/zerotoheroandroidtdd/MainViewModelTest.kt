@@ -2,6 +2,8 @@ package ru.easycode.zerotoheroandroidtdd
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
@@ -45,10 +47,11 @@ class MainViewModelTest {
     }
 
     @Test
-    fun test() {
+    fun test() = runBlocking {
         repository.expectResult(LoadResult.Success(SimpleResponse(text = "testingText")))
 
         viewModel.load()
+        delay(500)
         liveDataWrapper.checkUpdateCalls(
             listOf(
                 UiState.ShowProgress,
