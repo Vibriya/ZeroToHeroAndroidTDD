@@ -1,10 +1,10 @@
-package ru.easycode.zerotoheroandroidtdd.create
+package ru.easycode.zerotoheroandroidtdd.list
 
 import androidx.lifecycle.ViewModel
 import ru.easycode.zerotoheroandroidtdd.core.ListLiveDataWrapper
+import ru.easycode.zerotoheroandroidtdd.create.CreateScreen
 import ru.easycode.zerotoheroandroidtdd.main.BundleWrapper
 import ru.easycode.zerotoheroandroidtdd.main.Navigation
-import ru.easycode.zerotoheroandroidtdd.main.Screen
 
 class ListViewModel(
     private val liveDataWrapper: ListLiveDataWrapper.Mutable,
@@ -12,7 +12,7 @@ class ListViewModel(
 ) : ViewModel() {
 
     fun create() {
-        navigation.update(Screen.CreateScreen)
+        navigation.update(CreateScreen)
     }
 
     fun save(bundleWrapper: BundleWrapper.Save) {

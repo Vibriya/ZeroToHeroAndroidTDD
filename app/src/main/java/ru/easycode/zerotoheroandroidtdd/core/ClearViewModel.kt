@@ -1,4 +1,4 @@
-package ru.easycode.zerotoheroandroidtdd.create
+package ru.easycode.zerotoheroandroidtdd.core
 
 import androidx.lifecycle.ViewModel
 

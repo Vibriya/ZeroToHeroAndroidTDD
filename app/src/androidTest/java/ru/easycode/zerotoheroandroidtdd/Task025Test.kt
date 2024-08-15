@@ -119,7 +119,7 @@ class Task025Test {
 
         createPage.checkNotVisibleNow()
         listPage.checkVisibleNow()
-        listPage.checkTextAtPosition(0, "one")
+        listPage.checkTextAtPosition(22, "one")
     }
 
     @Test

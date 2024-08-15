@@ -1,10 +1,11 @@
-package ru.easycode.zerotoheroandroidtdd
+package ru.easycode.zerotoheroandroidtdd.list
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import ru.easycode.zerotoheroandroidtdd.R
 
 class RAdapter(
     private val list: MutableList<String> = mutableListOf()

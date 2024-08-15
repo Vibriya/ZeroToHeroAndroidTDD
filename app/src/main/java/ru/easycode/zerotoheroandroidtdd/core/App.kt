@@ -2,7 +2,6 @@ package ru.easycode.zerotoheroandroidtdd.core
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
-import ru.easycode.zerotoheroandroidtdd.create.ClearViewModel
 
 class App : Application(), ProvideViewModel, ClearViewModel {
     private lateinit var viewModelsFactory: ViewModelFactory

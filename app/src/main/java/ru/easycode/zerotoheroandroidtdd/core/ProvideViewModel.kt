@@ -1,11 +1,11 @@
 package ru.easycode.zerotoheroandroidtdd.core
 
 import androidx.lifecycle.ViewModel
-import ru.easycode.zerotoheroandroidtdd.create.ClearViewModel
 import ru.easycode.zerotoheroandroidtdd.create.CreateViewModel
-import ru.easycode.zerotoheroandroidtdd.create.ListViewModel
+import ru.easycode.zerotoheroandroidtdd.list.ListViewModel
 import ru.easycode.zerotoheroandroidtdd.main.MainViewModel
 import ru.easycode.zerotoheroandroidtdd.main.Navigation
+import java.lang.ref.SoftReference
 
 interface ProvideViewModel {
     fun <T : ViewModel> viewModel(viewModelClass: Class<T>): T

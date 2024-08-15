@@ -1,6 +1,7 @@
 package ru.easycode.zerotoheroandroidtdd.create
 
 import androidx.lifecycle.ViewModel
+import ru.easycode.zerotoheroandroidtdd.core.ClearViewModel
 import ru.easycode.zerotoheroandroidtdd.core.ListLiveDataWrapper
 import ru.easycode.zerotoheroandroidtdd.main.Navigation
 import ru.easycode.zerotoheroandroidtdd.main.Screen

@@ -3,11 +3,10 @@ package ru.easycode.zerotoheroandroidtdd.list
 import org.junit.Before
 import org.junit.Test
 import ru.easycode.zerotoheroandroidtdd.core.ListLiveDataWrapper
-import ru.easycode.zerotoheroandroidtdd.create.ListViewModel
+import ru.easycode.zerotoheroandroidtdd.create.CreateScreen
 import ru.easycode.zerotoheroandroidtdd.main.BundleWrapper
 import ru.easycode.zerotoheroandroidtdd.main.FakeNavigation
 import ru.easycode.zerotoheroandroidtdd.main.Navigation
-import ru.easycode.zerotoheroandroidtdd.main.Screen
 
 class ListViewModelTest {
 
@@ -32,7 +31,7 @@ class ListViewModelTest {
     @Test
     fun test_navigation() {
         viewModel.create()
-        navigation.checkUpdateCalled(listOf(Screen.CreateScreen))
+        navigation.checkUpdateCalled(listOf(CreateScreen))
     }
 
     @Test
