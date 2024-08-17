@@ -9,11 +9,12 @@ import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import ru.easycode.zerotoheroandroidtdd.core.ItemCache
+import ru.easycode.zerotoheroandroidtdd.core.ItemsDao
+import ru.easycode.zerotoheroandroidtdd.core.ItemsDataBase
 import java.io.IOException
 
-/**
- * This is test for Room, no ui expected
- */
+
 @RunWith(AndroidJUnit4::class)
 class RoomTest {
 
