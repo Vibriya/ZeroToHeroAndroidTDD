@@ -5,8 +5,9 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 import ru.easycode.zerotoheroandroidtdd.core.FolderCache
 import ru.easycode.zerotoheroandroidtdd.core.FoldersDao
+import ru.easycode.zerotoheroandroidtdd.core.Now
+import ru.easycode.zerotoheroandroidtdd.folder.list.Folder
 import ru.easycode.zerotoheroandroidtdd.note.core.FakeNotesDao
-import ru.easycode.zerotoheroandroidtdd.note.core.Now
 
 class FoldersRepositoryTest {
 

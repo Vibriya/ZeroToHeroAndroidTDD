@@ -1,5 +1,6 @@
 package ru.easycode.zerotoheroandroidtdd.core
 
+import androidx.lifecycle.LiveData
 import org.junit.Assert.assertEquals
 import ru.easycode.zerotoheroandroidtdd.main.Navigation
 import ru.easycode.zerotoheroandroidtdd.main.Screen
@@ -24,6 +25,8 @@ interface FakeNavigation : Navigation.Mutable {
             actual = screen
             order.add(NAVIGATE)
         }
+
+        override fun liveData(): LiveData<Screen> = throw IllegalStateException("not used")
 
         override fun checkScreen(expected: Screen) {
             assertEquals(expected, actual)
