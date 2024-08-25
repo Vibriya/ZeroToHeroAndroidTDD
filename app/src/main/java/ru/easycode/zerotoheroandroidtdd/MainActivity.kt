@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.AnnotatedString
@@ -40,7 +41,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Scene() {
-    val showButton: MutableState<Boolean> = remember {
+    val showButton: MutableState<Boolean> = rememberSaveable  {
         mutableStateOf(true)
     }
     val label: String = if (showButton.value) "Click me!" else "That's right!"
