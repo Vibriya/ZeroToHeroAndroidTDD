@@ -33,15 +33,10 @@ fun Hello(text: String) {
     Text(text = text)
 }
 
-@Preview
+@Preview(widthDp = 320, heightDp = 780, showBackground = true)
 @Composable
 fun HelloPreview() {
     ZeroToHeroAndroidTDDTheme {
-        Surface(
-            modifier = Modifier.fillMaxSize(),
-            color = MaterialTheme.colorScheme.background
-        ) {
-            Hello("Hello World!")
-        }
+        Hello("Hello World!")
     }
 }
